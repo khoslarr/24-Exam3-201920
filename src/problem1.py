@@ -3,9 +3,9 @@ Exam 3, problem 1.
 
 Authors: Vibha Alangar, Aaron Wilkin, David Mutchler, Dave Fisher, 
          Matt Boutell, Amanda Stouder, their colleagues and 
-         PUT_YOUR_NAME_HERE.  January 2019.
+         Rishav Khosla.  January 2019.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -139,6 +139,20 @@ def problem1(n):
     # and THEN try the full-credit version.
     # As always, CONTINUE to the next problem if you are STUCK on this one.
     # -------------------------------------------------------------------------
+    # k = 0
+    # while True:
+    #     k = k + 1
+    #     if fibonacci(k) >= n:
+    #         break
+    # return fibonacci(k-1)
+    k = 0
+    list = [0, 1]
+    while True:
+        for k in range(len(list)):
+            if list[len(list)-1] + list[len(list)-2] >= n:
+                break
+            list.append(list[len(list)-1] + list[len(list)-2])
+    return list[len(list)-1]
 
 
 ###############################################################################
