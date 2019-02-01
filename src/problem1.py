@@ -148,10 +148,9 @@ def problem1(n):
     k = 0
     list = [0, 1]
     while True:
-        for k in range(len(list)):
-            if list[len(list)-1] + list[len(list)-2] >= n:
-                break
-            list.append(list[len(list)-1] + list[len(list)-2])
+        if list[len(list)-1] + list[len(list)-2] >= n:
+            break
+        list.append(list[len(list)-1] + list[len(list)-2])
     return list[len(list)-1]
 
 
